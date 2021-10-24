@@ -58,12 +58,12 @@ public class PlayerControl : MonoBehaviour
         //balance
         else if (transform.eulerAngles.z < 15)
         {
-            transform.Rotate(-Vector3.forward*0.6f);
+            transform.Rotate(-Vector3.forward*0.2f);
         }
 
         else if (transform.eulerAngles.z > 345)
         {
-            transform.Rotate(Vector3.forward*0.6f);
+            transform.Rotate(Vector3.forward*0.2f);
         }
 
 
