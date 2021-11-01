@@ -1259,6 +1259,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4092070919858577465, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
+      propertyPath: verticalThrust
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092070919858577465, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
+      propertyPath: horizontalThrust
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092070919858577466, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
+      propertyPath: m_Drag
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4092070919858577466, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
+      propertyPath: m_Mass
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4092070919858577466, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
       propertyPath: m_Interpolate
       value: 1
