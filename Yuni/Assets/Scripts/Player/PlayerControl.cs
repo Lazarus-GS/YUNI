@@ -6,9 +6,12 @@ public class PlayerControl : MonoBehaviour
 {
 
     private Rigidbody _rBody;
+    private bool rightKeyPressed;
+    private bool leftKeyPressed;
+    private bool thrustKeypressd;
 
-    private float verticalThrust = 25f;
-    private float horizontalThrust = 15f;
+    public float verticalThrust = 45f;
+    public float horizontalThrust = 15f;
 
     private void Awake()
     {
@@ -31,39 +34,36 @@ public class PlayerControl : MonoBehaviour
     private void ProcessInput()
     {
 
-        if (Input.GetKey(KeyCode.Space)) // Thrust(Verticle Control)
+        if (Input.GetKey(KeyCode.W)) // Thrust(Verticle Control)
         {
-            _rBody.AddForce(Vector3.up * verticalThrust);
+            thrustKeypressd = true;
+
         }
 
         //Horizontal Contrlon and Rotation Control
         if (Input.GetKey(KeyCode.A))
         {
+            leftKeyPressed = true;
 
-            _rBody.AddForce(-Vector3.right * horizontalThrust);
-
-            transform.Rotate(Vector3.forward * 1);
 
         }
 
         if (Input.GetKey(KeyCode.D))
         {
+            rightKeyPressed = true;
 
-            _rBody.AddForce(Vector3.right * horizontalThrust);
-
-            transform.Rotate(-Vector3.forward * 1);
 
         }
 
         //balance
         else if (transform.eulerAngles.z < 15)
         {
-            transform.Rotate(-Vector3.forward*0.2f);
+            transform.Rotate(-Vector3.forward * 0.2f);
         }
 
         else if (transform.eulerAngles.z > 345)
         {
-            transform.Rotate(Vector3.forward*0.2f);
+            transform.Rotate(Vector3.forward * 0.2f);
         }
 
 
@@ -82,4 +82,28 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+        if (thrustKeypressd == true)
+        {
+            _rBody.AddForce(Vector3.up * verticalThrust);
+            thrustKeypressd = false;
+        }
+
+        if (rightKeyPressed == true)
+        {
+            _rBody.AddForce(Vector3.right * horizontalThrust);
+
+            transform.Rotate(-Vector3.forward * 1);
+            rightKeyPressed = false;
+        }
+
+        if (leftKeyPressed == true)
+        {
+            _rBody.AddForce(-Vector3.right * horizontalThrust);
+
+            transform.Rotate(Vector3.forward * 1);
+            leftKeyPressed = false;
+        }
+    }
 }
