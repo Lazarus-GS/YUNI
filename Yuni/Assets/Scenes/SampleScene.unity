@@ -1408,30 +1408,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2713742742830822640, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
-      propertyPath: m_MaxValue
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2713742742830822640, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
-      propertyPath: m_MinValue
-      value: -80
-      objectReference: {fileID: 0}
-    - target: {fileID: 2713742742830822640, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
-      propertyPath: m_Colors.m_PressedColor.b
-      value: 0.8235294
-      objectReference: {fileID: 0}
-    - target: {fileID: 2713742742830822640, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
-      propertyPath: m_Colors.m_PressedColor.g
-      value: 0.93454945
-      objectReference: {fileID: 0}
-    - target: {fileID: 2713742742830822640, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
-      propertyPath: m_Colors.m_PressedColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2713742742830822640, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
-      propertyPath: m_Colors.m_ColorMultiplier
-      value: 1.09
-      objectReference: {fileID: 0}
     - target: {fileID: 2713742743171068103, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1440,10 +1416,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2713742744345661360, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
-      propertyPath: audioMixer
-      value: 
-      objectReference: {fileID: 24100000, guid: 13a708a9ef2385e4bb88b38eb9169138, type: 2}
     - target: {fileID: 2713742744345661361, guid: 3e11c2b3dd0d7da47a15f7e0bee5ab66, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1596,26 +1568,6 @@ PrefabInstance:
     - target: {fileID: 4092070919858577464, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092070919858577465, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
-      propertyPath: verticalThrust
-      value: 105
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092070919858577465, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
-      propertyPath: horizontalThrust
-      value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092070919858577466, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
-      propertyPath: m_Drag
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092070919858577466, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
-      propertyPath: m_Mass
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4092070919858577466, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
-      propertyPath: m_Interpolate
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4092070919858577471, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
       propertyPath: m_Name
