@@ -44,8 +44,10 @@ public class PlayerControl : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             leftKeyPressed = true;
-
-
+        }
+        else if (transform.eulerAngles.z < 15)
+        {
+            transform.Rotate(-Vector3.forward * 0.2f);
         }
 
         if (Input.GetKey(KeyCode.D))
@@ -54,18 +56,13 @@ public class PlayerControl : MonoBehaviour
 
 
         }
-
         //balance
-        else if (transform.eulerAngles.z < 15)
-        {
-            transform.Rotate(-Vector3.forward * 0.2f);
-        }
+        
 
         else if (transform.eulerAngles.z > 345)
         {
             transform.Rotate(Vector3.forward * 0.2f);
         }
-
 
         //lock
         if ((transform.eulerAngles.z > 10) && (transform.eulerAngles.z < 180))
@@ -105,5 +102,10 @@ public class PlayerControl : MonoBehaviour
             transform.Rotate(Vector3.forward * 1);
             leftKeyPressed = false;
         }
+
+        
+
+
+        
     }
 }
