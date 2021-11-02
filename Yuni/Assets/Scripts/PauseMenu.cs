@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -59,9 +60,10 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public AudioMixer audioMixer;
     public void changeVolume(float Volume)
     {
-        Debug.Log(Volume);
+        audioMixer.SetFloat("masterVolume", Volume);
     }
 
 
