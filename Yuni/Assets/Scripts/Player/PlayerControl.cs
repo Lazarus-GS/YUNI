@@ -47,13 +47,12 @@ public class PlayerControl : MonoBehaviour
         }
         else if (transform.eulerAngles.z < 15)
         {
-            transform.Rotate(-Vector3.forward * 1f);
+            transform.Rotate(-Vector3.forward * 0.2f);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             rightKeyPressed = true;
-
 
         }
         //balance
@@ -61,10 +60,20 @@ public class PlayerControl : MonoBehaviour
 
         else if (transform.eulerAngles.z > 345)
         {
-            transform.Rotate(Vector3.forward * 1f);
+            transform.Rotate(Vector3.forward * 0.2f);
         }
 
-       
+        //lock
+        if ((transform.eulerAngles.z > 10) && (transform.eulerAngles.z < 180))
+        {
+            transform.eulerAngles = new Vector3(0, 0, 10);
+        }
+
+
+        if ((transform.eulerAngles.z < 350) && (transform.eulerAngles.z > 180))
+        {
+            transform.eulerAngles = new Vector3(0, 0, 350);
+        }
 
 
     }
@@ -92,20 +101,8 @@ public class PlayerControl : MonoBehaviour
             transform.Rotate(Vector3.forward * 1);
             leftKeyPressed = false;
         }
+      
 
-        //lock
-        if ((transform.eulerAngles.z > 10) && (transform.eulerAngles.z < 180))
-        {
-            transform.eulerAngles = new Vector3(0, 0, 10);
-        }
-
-
-        if ((transform.eulerAngles.z < 350) && (transform.eulerAngles.z > 180))
-        {
-            transform.eulerAngles = new Vector3(0, 0, 350);
-        }
-
-
-
+        
     }
 }
