@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -10,10 +11,13 @@ public class PauseMenu : MonoBehaviour
     void Start()
     {
         pauseMenuUI.SetActive(false);
+
+        
     }
 
     public static bool IsPaused = false;
     public GameObject pauseMenuUI;
+    
 
     // Update is called once per frame
     void Update()
@@ -55,10 +59,10 @@ public class PauseMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void optionsMenu()
+    public void changeVolume(float Volume)
     {
-        Debug.Log("Loading Options...");
-
+        Debug.Log(Volume);
     }
+
 
 }

@@ -54,9 +54,8 @@ public class PlayerControl : MonoBehaviour
 
 
         }
-
         //balance
-        else if (transform.eulerAngles.z < 15)
+        else if (transform.eulerAngles.z < 45)
         {
             transform.Rotate(-Vector3.forward * 0.2f);
         }
@@ -66,11 +65,10 @@ public class PlayerControl : MonoBehaviour
             transform.Rotate(Vector3.forward * 0.2f);
         }
 
-
         //lock
-        if ((transform.eulerAngles.z > 10) && (transform.eulerAngles.z < 180))
+        if ((transform.eulerAngles.z > 40) && (transform.eulerAngles.z < 180))
         {
-            transform.eulerAngles = new Vector3(0, 0, 10);
+            transform.eulerAngles = new Vector3(0, 0, 40);
         }
 
 
@@ -105,5 +103,10 @@ public class PlayerControl : MonoBehaviour
             transform.Rotate(Vector3.forward * 1);
             leftKeyPressed = false;
         }
+
+        
+
+
+        
     }
 }
