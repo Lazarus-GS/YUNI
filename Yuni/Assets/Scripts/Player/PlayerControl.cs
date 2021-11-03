@@ -122,7 +122,7 @@ public class PlayerControl : MonoBehaviour
         
     }
     //grouded checks
-    private void OnCollisionEnter(Collision collision)
+   /* private void OnCollisionEnter(Collision collision)
     {
         isGrounded = true;
     }
@@ -130,7 +130,7 @@ public class PlayerControl : MonoBehaviour
     private void OnCollisionExit(Collision collision)
     {
         isGrounded = false;
-    }
+    }*/
 
    // private void OnCollisionEnter2D(Collision2D collision)
    // {
