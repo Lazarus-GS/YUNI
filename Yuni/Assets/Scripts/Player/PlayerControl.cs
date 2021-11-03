@@ -9,12 +9,14 @@ public class PlayerControl : MonoBehaviour
     private bool rightKeyPressed;
     private bool leftKeyPressed;
     private bool thrustKeypressd;
+    
     private bool isGrounded;
+    [SerializeField] private Transform groundCheckTransform = null;
 
     public float verticalThrust = 45f;
     public float horizontalThrust = 15f;
 
-    Vector3 lastVelocity;
+   //Vector3 lastVelocity;
 
     private void Awake()
     {
@@ -86,7 +88,6 @@ public class PlayerControl : MonoBehaviour
     private void FixedUpdate()
     {
 
-        lastVelocity = _rBody.velocity;
 
         //thruster
         if (thrustKeypressd == true)
@@ -96,10 +97,15 @@ public class PlayerControl : MonoBehaviour
         }
 
         //When grounded nothing works
-        if (isGrounded)
+       // if (isGrounded)
+       // {
+       //     return;
+       //}
+        if(Physics.OverlapSphere(groundCheckTransform.position, 0.2f).Length == 2)
         {
             return;
         }
+
 
         //movement controls
         if (rightKeyPressed == true)
@@ -132,12 +138,6 @@ public class PlayerControl : MonoBehaviour
         isGrounded = false;
     }*/
 
-   // private void OnCollisionEnter2D(Collision2D collision)
-   // {
-   //     var speed = lastVelocity.magnitude;
-   //     var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
 
-   //     _rBody.velocity = direction * Mathf.Max(speed, 30f);
-   //}
 
 }
