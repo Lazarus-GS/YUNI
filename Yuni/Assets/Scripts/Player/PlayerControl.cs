@@ -9,9 +9,12 @@ public class PlayerControl : MonoBehaviour
     private bool rightKeyPressed;
     private bool leftKeyPressed;
     private bool thrustKeypressd;
+    private bool isGrounded;
 
     public float verticalThrust = 45f;
     public float horizontalThrust = 15f;
+
+    Vector3 lastVelocity;
 
     private void Awake()
     {
@@ -40,11 +43,13 @@ public class PlayerControl : MonoBehaviour
 
         }
 
-        //Horizontal Contrlon and Rotation Control
+        //Horizontal Control and Rotation Control
         if (Input.GetKey(KeyCode.A))
         {
             leftKeyPressed = true;
         }
+
+        //balance
         else if (transform.eulerAngles.z < 15)
         {
             transform.Rotate(-Vector3.forward * 0.2f);
@@ -55,9 +60,9 @@ public class PlayerControl : MonoBehaviour
             rightKeyPressed = true;
 
         }
-        //balance
-        
 
+
+        //balance
         else if (transform.eulerAngles.z > 345)
         {
             transform.Rotate(Vector3.forward * 0.2f);
@@ -80,12 +85,23 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        lastVelocity = _rBody.velocity;
+
+        //thruster
         if (thrustKeypressd == true)
         {
             _rBody.AddForce(Vector3.up * verticalThrust);
             thrustKeypressd = false;
         }
 
+        //When grounded nothing works
+        if (isGrounded)
+        {
+            return;
+        }
+
+        //movement controls
         if (rightKeyPressed == true)
         {
             _rBody.AddForce(Vector3.right * horizontalThrust);
@@ -105,4 +121,23 @@ public class PlayerControl : MonoBehaviour
 
         
     }
+    //grouded checks
+    private void OnCollisionEnter(Collision collision)
+    {
+        isGrounded = true;
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        isGrounded = false;
+    }
+
+   // private void OnCollisionEnter2D(Collision2D collision)
+   // {
+   //     var speed = lastVelocity.magnitude;
+   //     var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+
+   //     _rBody.velocity = direction * Mathf.Max(speed, 30f);
+   //}
+
 }
