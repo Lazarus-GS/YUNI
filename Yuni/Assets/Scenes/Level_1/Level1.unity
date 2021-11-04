@@ -654,14 +654,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BgMusic
       objectReference: {fileID: 0}
-    - target: {fileID: 7701750058550156321, guid: cfc8a5585e261864e992483b87372591, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7701750058550156321, guid: cfc8a5585e261864e992483b87372591, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e519c42a9f15acc4ab4d2cef1bd1869c, type: 3}
     - target: {fileID: 7701750058550156322, guid: cfc8a5585e261864e992483b87372591, type: 3}
       propertyPath: m_RootOrder
       value: 3

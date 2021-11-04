@@ -49,9 +49,17 @@ public class PauseMenu : MonoBehaviour
         IsPaused = true;
     }
 
+    public void Restart()
+    {
+        Debug.Log("Restarting");
+        //SceneManager.LoadScene("Level1");
+    }
+
     public void loadingMenu()
     {
         Debug.Log("Loading Menu...");
+       /* Time.timeScale = 1f;
+        SceneManager.LoadScene("Main Menu");*/
     }
 
     public void quittingGame()
