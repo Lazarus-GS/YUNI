@@ -356,6 +356,10 @@ MonoBehaviour:
   groundCheckTransform: {fileID: 6869547733092469985}
   verticalThrust: 105
   horizontalThrust: 75
+  maxHealth: 180
+  currentHealth: 0
+  healthBar: {fileID: 0}
+  numberOfOrbs: 0
 --- !u!1 &6869547733816357605
 GameObject:
   m_ObjectHideFlags: 0
