@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bomb
   - Lander
+  - timebomb
   layers:
   - Default
   - TransparentFX

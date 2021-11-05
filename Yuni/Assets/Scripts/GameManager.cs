@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
     
     public void deathScreen()
     {
+        Debug.Log("Hit");
         SceneManager.LoadScene("deathScreen");
     }
     public void restartGame()

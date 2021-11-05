@@ -15,9 +15,10 @@ public class PlayerControl : MonoBehaviour
 
     public float verticalThrust = 45f;
     public float horizontalThrust = 15f;
+    private bool noControls = true;
 
 
-   //Vector3 lastVelocity;
+    //Vector3 lastVelocity;
 
     private void Awake()
     {
@@ -102,10 +103,11 @@ public class PlayerControl : MonoBehaviour
        // {
        //     return;
        //}
-        if(Physics.OverlapSphere(groundCheckTransform.position, 0.2f).Length == 2)
-        {
-            return;
-        }
+ 
+            if((Physics.OverlapSphere(groundCheckTransform.position, 0.2f).Length == 2) && (noControls == true))
+            {
+                return;
+            }
 
 
         //movement controls
@@ -132,6 +134,7 @@ public class PlayerControl : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         //Bomb Traps
+        
         if (collision.collider.tag == "Bomb")
         {
             FindObjectOfType<GameManager>().deathScreen();
@@ -143,6 +146,24 @@ public class PlayerControl : MonoBehaviour
             GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 0f;
         }
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "timebomb")
+        {
+
+            noControls = false;
+        }
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if(other.tag == "timebomb")
+        {
+            noControls = true;
+        }
     }
 
 

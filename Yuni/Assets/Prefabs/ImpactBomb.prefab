@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 966117139700919083}
   - component: {fileID: 966117139700919087}
   m_Layer: 0
-  m_Name: bombRef
+  m_Name: ImpactBomb
   m_TagString: Bomb
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
