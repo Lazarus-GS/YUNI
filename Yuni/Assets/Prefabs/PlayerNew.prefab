@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 6869547733588082744}
   m_Layer: 0
   m_Name: Vale(Object)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -304,7 +304,7 @@ GameObject:
   - component: {fileID: 6869547733740274668}
   m_Layer: 0
   m_Name: PlayerNew
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

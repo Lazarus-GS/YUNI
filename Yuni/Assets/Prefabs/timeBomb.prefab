@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explotionRadius: 3
-  explotionForce: 200
-  delay: 5
+  explotionForce: 500
+  delay: 3
 --- !u!135 &6898273175480324794
 SphereCollider:
   m_ObjectHideFlags: 0
