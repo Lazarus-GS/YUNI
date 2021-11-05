@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,6 +18,12 @@ public class PlayerControl : MonoBehaviour
     public float horizontalThrust = 15f;
     private bool noControls = true;
 
+    public int maxHealth = 90;
+    public int currentHealth;
+    public HealthBar healthBar;
+
+    public int numberOfOrbs = 0;
+
 
     //Vector3 lastVelocity;
 
@@ -28,7 +35,8 @@ public class PlayerControl : MonoBehaviour
 
     void Start()
     {
-
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
 
@@ -89,7 +97,8 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        Debug.Log(numberOfOrbs);
+        
 
         //thruster
         if (thrustKeypressd == true)
@@ -126,6 +135,11 @@ public class PlayerControl : MonoBehaviour
             transform.Rotate(Vector3.forward * 1);
             leftKeyPressed = false;
         }
+
+        if (currentHealth == 0)
+        {
+            FindObjectOfType<GameManager>().deathScreen();
+        }
       
 
         
@@ -137,7 +151,13 @@ public class PlayerControl : MonoBehaviour
         
         if (collision.collider.tag == "Bomb")
         {
-            FindObjectOfType<GameManager>().deathScreen();
+            TakeDamage(90);
+            //FindObjectOfType<GameManager>().deathScreen();
+            
+        }
+        if(collision.collider.tag == "Untagged")
+        {
+            TakeDamage(30);
         }
 
         //landing stations
@@ -148,12 +168,22 @@ public class PlayerControl : MonoBehaviour
         
     }
 
+    private void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        healthBar.SetHealth(currentHealth);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "timebomb")
         {
-
             noControls = false;
+        }
+        if (other.gameObject.layer == 6)
+        {
+            Destroy(other.gameObject);
+            numberOfOrbs += 1;
         }
 
     }
@@ -164,7 +194,10 @@ public class PlayerControl : MonoBehaviour
         {
             noControls = true;
         }
+
+        
     }
+
 
 
 }
