@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0000085831, y: -2.8}
-  m_SizeDelta: {x: 160.5783, y: 114.6988}
+  m_AnchoredPosition: {x: 0.000010312, y: -0.0000044495}
+  m_SizeDelta: {x: 101.34, y: 16.701}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1001502071
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 8bd59cd46ad166942931f00a32e275f0, type: 3}
+  m_Texture: {fileID: 2800000, guid: 704ce532ea6ba8e4d8bbe33e9a2b785b, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -106,8 +106,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000076294, y: -42.349}
-  m_SizeDelta: {x: 160.5783, y: 114.6988}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -0.0000038146973}
+  m_SizeDelta: {x: 39.911, y: 16.7274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1623481394
 CanvasRenderer:
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 12f2371e605ac3f45842dd0da1ef784a, type: 3}
+  m_Texture: {fileID: 2800000, guid: fb2a8bc49e1e4244cb0168bf432e4937, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -178,8 +178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.00000095367, y: 28.7}
-  m_SizeDelta: {x: 232.7769, y: 166.2693}
+  m_AnchoredPosition: {x: -0.0000088989, y: 0.0000016689}
+  m_SizeDelta: {x: 84.1591, y: 21.1321}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1824696187
 CanvasRenderer:
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: b66e4ae373efff14ab34da253eb6979e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7b42437056916634aa4c4c59ac5aa936, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -285,8 +285,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000011444, y: -52}
-  m_SizeDelta: {x: 298.7795, y: 213.4151}
+  m_AnchoredPosition: {x: 0, y: 0.0000038146973}
+  m_SizeDelta: {x: 126.0969, y: 29.5832}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2065058151
 CanvasRenderer:
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: f69dfa75a79af504c9e6864d9c9cbd7e, type: 3}
+  m_Texture: {fileID: 2800000, guid: 5333ef7baff1a65469a622b0b1665c4d, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -530,7 +530,7 @@ MonoBehaviour:
     m_SelectedColor: {r: 0.18823531, g: 0.18823531, b: 0.18823531, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 5
-    m_FadeDuration: 0.6
+    m_FadeDuration: 0.7
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -775,7 +775,7 @@ MonoBehaviour:
     m_SelectedColor: {r: 0.18823531, g: 0.18823531, b: 0.18823531, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 5
-    m_FadeDuration: 0.6
+    m_FadeDuration: 0.7
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -869,14 +869,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.34901962}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.019607844}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: ecb2119424c5dc54e83811b366e6dab1, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1155,13 +1155,13 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0, g: 0, b: 0, a: 0.05490196}
+    m_NormalColor: {r: 0, g: 0, b: 0, a: 0}
     m_HighlightedColor: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
     m_PressedColor: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
     m_SelectedColor: {r: 0.18823531, g: 0.18823531, b: 0.18823531, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 5
-    m_FadeDuration: 0.6
+    m_FadeDuration: 0.7
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -1429,7 +1429,7 @@ Canvas:
   m_GameObject: {fileID: 2713742744345661365}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 1
@@ -1453,12 +1453,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1736,8 +1736,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.6, y: -19.7}
-  m_SizeDelta: {x: 242.9899, y: 173.5643}
+  m_AnchoredPosition: {x: 0.0000066757, y: 0.0000066757}
+  m_SizeDelta: {x: 95.0036, y: 19.726}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3695215960044843128
 CanvasRenderer:
@@ -1767,7 +1767,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 7f82df9600cbfe94198532d621ae2eda, type: 3}
+  m_Texture: {fileID: 2800000, guid: f9ebac40ba3d69c489d098e6a40b8af7, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1958,7 +1958,7 @@ MonoBehaviour:
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 5
-    m_FadeDuration: 0.6
+    m_FadeDuration: 0.7
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}

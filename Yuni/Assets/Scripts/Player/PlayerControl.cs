@@ -16,6 +16,7 @@ public class PlayerControl : MonoBehaviour
     public float verticalThrust = 45f;
     public float horizontalThrust = 15f;
 
+
    //Vector3 lastVelocity;
 
     private void Awake()
@@ -127,17 +128,22 @@ public class PlayerControl : MonoBehaviour
 
         
     }
-    //grouded checks
-   /* private void OnCollisionEnter(Collision collision)
+    //Bomb Traps
+    private void OnCollisionEnter(Collision collision)
     {
-        isGrounded = true;
+        //Bomb Traps
+        if (collision.collider.tag == "Bomb")
+        {
+            FindObjectOfType<GameManager>().deathScreen();
+        }
+
+        //landing stations
+        if(collision.collider.tag =="Lander")
+        {
+            GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 0f;
+        }
+        
     }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        isGrounded = false;
-    }*/
-
 
 
 }
