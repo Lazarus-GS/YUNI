@@ -10,7 +10,9 @@ public class PlayerControl : MonoBehaviour
     private bool rightKeyPressed;
     private bool leftKeyPressed;
     private bool thrustKeypressd;
-    
+
+    public float countdownTime;
+
     private bool isGrounded;
     [SerializeField] private Transform groundCheckTransform = null;
 
@@ -21,6 +23,7 @@ public class PlayerControl : MonoBehaviour
     public int maxHealth = 90;
     public int currentHealth;
     public HealthBar healthBar;
+    public int collisionDamage;
 
     public int numberOfOrbs = 0;
 
@@ -97,7 +100,7 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(numberOfOrbs);
+        
         
 
         //thruster
@@ -136,7 +139,7 @@ public class PlayerControl : MonoBehaviour
             leftKeyPressed = false;
         }
 
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             FindObjectOfType<GameManager>().deathScreen();
         }
@@ -157,7 +160,17 @@ public class PlayerControl : MonoBehaviour
         }
         if(collision.collider.tag == "Untagged")
         {
-            TakeDamage(30);
+            var velocity = _rBody.velocity;
+            float speed = velocity.magnitude;
+            if (speed >= 3.0f)
+            {
+                Debug.Log(speed);
+                TakeDamage(collisionDamage);
+                
+            }
+                
+            
+                
         }
 
         //landing stations
@@ -179,13 +192,23 @@ public class PlayerControl : MonoBehaviour
         if (other.tag == "timebomb")
         {
             noControls = false;
-        }
-        if (other.gameObject.layer == 6)
-        {
-            Destroy(other.gameObject);
-            numberOfOrbs += 1;
-        }
+        }  
+    }
 
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Boundary")
+        {
+            countdownTime -= 1 * Time.deltaTime;
+            Debug.Log(countdownTime.ToString("0"));
+            if (countdownTime <= 0)
+            {
+                
+                FindObjectOfType<GameManager>().deathScreen();
+            }
+            
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
