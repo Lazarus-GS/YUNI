@@ -158,22 +158,18 @@ public class PlayerControl : MonoBehaviour
             //FindObjectOfType<GameManager>().deathScreen();
             
         }
-        if(collision.collider.tag == "Untagged")
+        if(collision.collider.tag == "Terrain")
         {
             var velocity = _rBody.velocity;
             float speed = velocity.magnitude;
             if (speed >= 3.0f)
             {
                 Debug.Log(speed);
-                TakeDamage(collisionDamage);
-                
+                TakeDamage(collisionDamage);   
             }
-                
-            
-                
+      
         }
-
-        //landing stations
+      //landing stations
         if(collision.collider.tag =="Lander")
         {
             GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 0f;
@@ -189,10 +185,15 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "timebomb")
+        if (other.tag != "Terrain")
         {
             noControls = false;
-        }  
+        }
+
+        if (other.tag == "Lander")
+        {
+            GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 0f;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -202,23 +203,32 @@ public class PlayerControl : MonoBehaviour
             countdownTime -= 1 * Time.deltaTime;
             Debug.Log(countdownTime.ToString("0"));
             if (countdownTime <= 0)
-            {
-                
+            { 
                 FindObjectOfType<GameManager>().deathScreen();
             }
             
+            
         }
         
+
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.tag == "timebomb")
+        if(other.tag != "Terrain")
         {
             noControls = true;
         }
-
         
+        if (other.tag == "Boundary")
+        {
+            countdownTime = 3;
+        }
+        if (other.tag == "Lander")
+        {
+            GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 1f;
+        }
+
     }
 
 

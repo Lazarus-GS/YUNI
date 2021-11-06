@@ -8,6 +8,7 @@ TagManager:
   - Lander
   - timebomb
   - Boundary
+  - Terrain
   layers:
   - Default
   - TransparentFX

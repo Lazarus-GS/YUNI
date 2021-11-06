@@ -6,7 +6,10 @@ public class Orbs : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        OrbsCollector.collection += 1;
-        Destroy(gameObject);
+        if (other.tag == "Player")
+        {
+            OrbsCollector.collection += 1;
+            Destroy(gameObject);
+        }
     }
 }
