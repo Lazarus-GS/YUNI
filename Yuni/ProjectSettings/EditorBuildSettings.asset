@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 0
     path: 
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Main Menu/Main Menu.unity
     guid: 7c4a26ff9b6df284987e4b69105dd68d
@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mmenu/Mmenu.unity
     guid: f946459b9dd3c934db2cf51227862fb6
+  - enabled: 1
+    path: Assets/Scenes/Trap Testing.unity
+    guid: 31af98d04901a364888823cae255c6de
   m_configObjects: {}

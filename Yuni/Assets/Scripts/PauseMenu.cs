@@ -50,8 +50,9 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         Debug.Log("Restarting");
-        FindObjectOfType<GameManager>().restartGame();
+        //FindObjectOfType<GameManager>().restartGame();
         //SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     public void MainMenu()
