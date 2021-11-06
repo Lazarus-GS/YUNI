@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
     
     public void deathScreen()
     {
-        Debug.Log("Hit");
         SceneManager.LoadScene("deathScreen");
     }
     public void restartGame()
@@ -16,8 +15,7 @@ public class GameManager : MonoBehaviour
 
     public void mainMenu()
     {
-        SceneManager.LoadScene("Main Menu");
-        
+        SceneManager.LoadScene("Main Menu");      
     }
 
 
