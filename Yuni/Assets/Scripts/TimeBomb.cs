@@ -9,19 +9,32 @@ public class TimeBomb : MonoBehaviour
     [SerializeField] private float explotionForce = 500;
 
     public float delay = 3f;
-
-
+    public float countdownTime = 3f;
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.tag);
-        if (other.tag != "Untagged" && other.tag != "Bomb")
+        
+        if (other.tag == "Player")
         {
-
-         StartCoroutine(timeDelay());
-         
-            
+           StartCoroutine(timeDelay());  
         }
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.tag == "Player")
+        {
+            countdownTime -= 1 * Time.deltaTime;
+            Debug.Log(countdownTime.ToString("0"));
+            if (countdownTime <= 0)
+            {
+                FindObjectOfType<GameManager>().deathScreen();
+            }
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        countdownTime = delay;
     }
 
     private void Explode()
@@ -33,7 +46,6 @@ public class TimeBomb : MonoBehaviour
             var rb = obj.GetComponent<Rigidbody>();
             if (rb == null) continue;
 
-            
             rb.AddExplosionForce(explotionForce, transform.position, explotionRadius);
 
         }
@@ -45,5 +57,6 @@ public class TimeBomb : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         Explode();
+
     }
 }

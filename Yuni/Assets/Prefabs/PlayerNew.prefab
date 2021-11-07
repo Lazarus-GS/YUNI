@@ -358,7 +358,7 @@ MonoBehaviour:
   groundCheckTransform: {fileID: 6869547733092469985}
   verticalThrust: 105
   horizontalThrust: 75
-  maxHealth: 2000
+  maxHealth: 200
   currentHealth: 0
   healthBar: {fileID: 0}
   collisionDamage: 20

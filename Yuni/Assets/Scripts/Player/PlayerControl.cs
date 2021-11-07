@@ -154,7 +154,7 @@ public class PlayerControl : MonoBehaviour
         
         if (collision.collider.tag == "Bomb")
         {
-            TakeDamage(90);
+            TakeDamage(currentHealth);
             //FindObjectOfType<GameManager>().deathScreen();
             
         }
@@ -169,14 +169,12 @@ public class PlayerControl : MonoBehaviour
             }
       
         }
-      //landing stations
-        if(collision.collider.tag =="Lander")
-        {
-            GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 0f;
-        }
+     
+        
         
     }
 
+    //Taking Damage
     private void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -185,20 +183,24 @@ public class PlayerControl : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        //Terrain Collision doesn't make loose control
         if (other.tag != "Terrain")
         {
             noControls = false;
         }
 
+        //landing stations
         if (other.tag == "Lander")
         {
             GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 0f;
         }
     }
 
+
     private void OnTriggerStay(Collider other)
     {
-        if(other.tag == "Boundary")
+        //Boundary
+        if (other.tag == "Boundary")
         {
             countdownTime -= 1 * Time.deltaTime;
             Debug.Log(countdownTime.ToString("0"));
