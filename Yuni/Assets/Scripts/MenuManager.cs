@@ -22,7 +22,15 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        frame[0].SetActive(true);
+        frame[1].SetActive(false);
+        frame[2].SetActive(false);
+        frame[3].SetActive(false);
+        //ES.SetSelectedGameObject(startButton);
+        frame0_cam.gameObject.SetActive(true);
+        frame1_cam.gameObject.SetActive(false);
+        frame2_cam.gameObject.SetActive(false);
+        frame3_cam.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -32,6 +40,8 @@ public class MenuManager : MonoBehaviour
         {
             frame[0].SetActive(false);
             frame[1].SetActive(true);
+            frame[2].SetActive(false);
+            frame[3].SetActive(false);
             ES.SetSelectedGameObject(startButton);
             frame0_cam.gameObject.SetActive(false);
             frame1_cam.gameObject.SetActive(true);
@@ -42,6 +52,7 @@ public class MenuManager : MonoBehaviour
             frame[1].SetActive(false);
             frame[2].SetActive(false);
             frame[0].SetActive(true);
+            frame[3].SetActive(false);
             frame1_cam.gameObject.SetActive(false);
             frame2_cam.gameObject.SetActive(false);
             frame0_cam.gameObject.SetActive(true);
@@ -69,6 +80,7 @@ public class MenuManager : MonoBehaviour
         frame[1].SetActive(false);
         frame[2].SetActive(true);
         frame[3].SetActive(false);
+        frame[0].SetActive(false);
         frame1_cam.gameObject.SetActive(false);
         frame2_cam.gameObject.SetActive(true);
     }
@@ -105,6 +117,7 @@ public class MenuManager : MonoBehaviour
         frame0_cam.gameObject.SetActive(false);
         frame1_cam.gameObject.SetActive(true);
         frame3_cam.gameObject.SetActive(false);
+        frame2_cam.gameObject.SetActive(false);
     }
 }
 
