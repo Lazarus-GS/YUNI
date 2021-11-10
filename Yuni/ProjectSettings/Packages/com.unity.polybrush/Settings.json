@@ -81,7 +81,7 @@
             {
                 "type": "UnityEditor.Polybrush.PrefabLoadout, Unity.Polybrush.Editor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
                 "key": "ScatteringEditor.userLoadout",
-                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"04994aead7a058e4980477a385e6518b\",\"type\":2},\"prefab\":{\"fileID\":8532854305791897180,\"guid\":\"ba61ea2ffec6b4e468fa23685b520e0b\",\"type\":3}}]}}"
+                "value": "{\"m_Value\":{\"infos\":[{\"palette\":{\"fileID\":11400000,\"guid\":\"2755dafc9225fc3469f28fb4f0f98d3e\",\"type\":2},\"prefab\":{\"fileID\":6282586709186687143,\"guid\":\"d4a5e906c92cc2048802925e8c58e2c8\",\"type\":3}}]}}"
             },
             {
                 "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
