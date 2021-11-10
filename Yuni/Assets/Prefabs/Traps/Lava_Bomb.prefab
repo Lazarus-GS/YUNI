@@ -2500,6 +2500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explotionRadius: 5
   explotionForce: 500
+  bombAnimation: {fileID: 0}
   delay: 3
   countdownTime: 3
 --- !u!1 &6753863811128064661
@@ -2531,7 +2532,7 @@ Transform:
   m_GameObject: {fileID: 6753863811128064661}
   m_LocalRotation: {x: -0.5020248, y: 0.49796697, z: 0.49796697, w: 0.5020248}
   m_LocalPosition: {x: 17.749985, y: 8.1256, z: -1.8827956}
-  m_LocalScale: {x: 36.29571, y: 36.29571, z: 36.29571}
+  m_LocalScale: {x: 93.72148, y: 93.72148, z: 93.72148}
   m_Children:
   - {fileID: 8998097000997152185}
   - {fileID: 3020495183719151712}
