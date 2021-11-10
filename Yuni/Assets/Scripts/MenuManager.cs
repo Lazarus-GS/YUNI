@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour
     public CinemachineBrain mainCamera;
     public CinemachineVirtualCamera frame0_cam;
     public CinemachineVirtualCamera frame1_cam;
-  //public CinemachineVirtualCamera frame2_cam;
+    public CinemachineVirtualCamera frame2_cam;
 
     public GameObject[] frame;
     public GameObject startButton;
@@ -38,19 +38,41 @@ public class MenuManager : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape) && !frame[0].activeInHierarchy)
         {
             frame[1].SetActive(false);
-          //frame[2].SetActive(false);
+            frame[2].SetActive(false);
             frame[0].SetActive(true);
             frame1_cam.gameObject.SetActive(false);
-            //frame2_cam.gameObject.SetActive(false);
+            frame2_cam.gameObject.SetActive(false);
             frame0_cam.gameObject.SetActive(true);
         }
     }
 
-    /*public void Credits()
+    public void Extras()
     {
         frame[1].SetActive(false);
         frame[2].SetActive(true);
         frame1_cam.gameObject.SetActive(false);
         frame2_cam.gameObject.SetActive(true);
-    }*/
+    }
+
+    public void Launch()
+    {
+        frame[1].SetActive(false);
+        frame[2].SetActive(false);
+        frame[0].SetActive(true);
+        frame1_cam.gameObject.SetActive(false);
+        frame2_cam.gameObject.SetActive(false);
+        frame0_cam.gameObject.SetActive(true);
+    }
+
+    public void Back()
+    {
+        frame[0].SetActive(false);
+        frame[2].SetActive(false);
+        frame[1].SetActive(true);
+        ES.SetSelectedGameObject(startButton);
+        frame0_cam.gameObject.SetActive(false);
+        frame1_cam.gameObject.SetActive(true);
+    }
 }
+
+
