@@ -9,17 +9,17 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Main Menu/Main Menu.unity
-    guid: 7c4a26ff9b6df284987e4b69105dd68d
+    path: Assets/Scenes/Mmenu/Mmenu.unity
+    guid: f946459b9dd3c934db2cf51227862fb6
   - enabled: 1
     path: Assets/Scenes/Level_1/Level1.unity
     guid: 6e9a8f3f3d4d63a4caac65a9eba23523
+  - enabled: 0
+    path: Assets/Scenes/Main Menu/Main Menu.unity
+    guid: 7c4a26ff9b6df284987e4b69105dd68d
   - enabled: 1
     path: Assets/Scenes/Death Screen/deathScreen.unity
     guid: 6265685e94775da479098e9dcf39877d
-  - enabled: 1
-    path: Assets/Scenes/Mmenu/Mmenu.unity
-    guid: f946459b9dd3c934db2cf51227862fb6
   - enabled: 1
     path: Assets/Scenes/Trap Testing.unity
     guid: 31af98d04901a364888823cae255c6de

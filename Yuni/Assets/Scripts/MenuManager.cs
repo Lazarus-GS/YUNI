@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 
 public class MenuManager : MonoBehaviour
@@ -12,6 +13,7 @@ public class MenuManager : MonoBehaviour
     public CinemachineVirtualCamera frame0_cam;
     public CinemachineVirtualCamera frame1_cam;
     public CinemachineVirtualCamera frame2_cam;
+    public CinemachineVirtualCamera frame3_cam;
 
     public GameObject[] frame;
     public GameObject startButton;
@@ -46,10 +48,27 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    public void PlayGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    //New Game
+    /*public void NewGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }*/
+    //Quit Game
+    public void QuitGame()
+    {
+        Debug.Log("QUIT!!");
+        Application.Quit();
+    }
     public void Extras()
     {
         frame[1].SetActive(false);
         frame[2].SetActive(true);
+        frame[3].SetActive(false);
         frame1_cam.gameObject.SetActive(false);
         frame2_cam.gameObject.SetActive(true);
     }
@@ -59,19 +78,33 @@ public class MenuManager : MonoBehaviour
         frame[1].SetActive(false);
         frame[2].SetActive(false);
         frame[0].SetActive(true);
+        frame[3].SetActive(false);
         frame1_cam.gameObject.SetActive(false);
         frame2_cam.gameObject.SetActive(false);
         frame0_cam.gameObject.SetActive(true);
     }
 
+    public void Options()
+    {
+        frame[1].SetActive(false);
+        frame[2].SetActive(false);
+        frame[0].SetActive(false);
+        frame[3].SetActive(true);
+        frame1_cam.gameObject.SetActive(false);
+        frame2_cam.gameObject.SetActive(false);
+        frame0_cam.gameObject.SetActive(false);
+        frame3_cam.gameObject.SetActive(true);
+    }
     public void Back()
     {
         frame[0].SetActive(false);
         frame[2].SetActive(false);
         frame[1].SetActive(true);
+        frame[3].SetActive(false);
         ES.SetSelectedGameObject(startButton);
         frame0_cam.gameObject.SetActive(false);
         frame1_cam.gameObject.SetActive(true);
+        frame3_cam.gameObject.SetActive(false);
     }
 }
 
