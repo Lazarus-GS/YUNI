@@ -12,7 +12,15 @@ public class CameraFollow : MonoBehaviour
     public float smoothFacter;
     void FixedUpdate()
     {
-        Follow(); 
+        Follow();
+        if (transform.position.x <= -2f)
+        {
+            transform.position = new Vector3(-2f, transform.position.y, transform.position.z);
+        }
+        if (transform.position.x >= 39f)
+        {
+            transform.position = new Vector3(39f, transform.position.y, transform.position.z);
+        }
     }
 
     private void Follow()
