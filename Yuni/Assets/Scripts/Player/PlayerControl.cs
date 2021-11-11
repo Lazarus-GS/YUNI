@@ -31,6 +31,10 @@ public class PlayerControl : MonoBehaviour
     public bool Dead = false;
     public bool IsDead = false;
     public GameObject DeathScreen;
+    public GameObject DeathBlack;
+
+    public AudioSource collide1;
+    public AudioSource collide2;
 
 
     //Vector3 lastVelocity;
@@ -48,6 +52,8 @@ public class PlayerControl : MonoBehaviour
 
         DeathScreen.SetActive(false);
 
+
+
     }
 
     
@@ -61,8 +67,10 @@ public class PlayerControl : MonoBehaviour
 
         if (IsDead)
         {
-            DeathScreen.SetActive(true);
+            
             Time.timeScale = 0f;
+            DeathScreen.SetActive(true);
+            
         }
 
     }//Update
@@ -184,10 +192,14 @@ public class PlayerControl : MonoBehaviour
             float speed = velocity.magnitude;
             if (speed >= 3.0f)
             {
-                Debug.Log(speed);
-                TakeDamage(collisionDamage);   
+                //Debug.Log(speed);
+                TakeDamage(collisionDamage);
+                collide1.Play();
+
+
             }
-      
+            
+
         }
      
         
@@ -207,7 +219,9 @@ public class PlayerControl : MonoBehaviour
         if (other.tag != "Terrain")
         {
             noControls = false;
+            
         }
+        
 
         //landing stations
         if (other.tag == "Lander")
@@ -280,6 +294,12 @@ public class PlayerControl : MonoBehaviour
     {
         Debug.Log("Quitting Game...");
         Application.Quit();
+    }
+
+    IEnumerator timeDelay()
+    {
+        yield return new WaitForSeconds(2);
+
     }
 
 
