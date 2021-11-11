@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class CameraFollow : MonoBehaviour
+public class CameraFollow2 : MonoBehaviour
 {
 
     public Transform target; //camera target
@@ -13,13 +13,13 @@ public class CameraFollow : MonoBehaviour
     void FixedUpdate()
     {
         Follow();
-        if (transform.position.x <= -2f)
+        /*if (transform.position.x <= -2f)
         {
             transform.position = new Vector3(-2f, transform.position.y, transform.position.z);
-        }
-        if (transform.position.x >= 39f)
+        }*/
+        if (transform.position.x >= 69f)
         {
-            transform.position = new Vector3(39f, transform.position.y, transform.position.z);
+            transform.position = new Vector3(69f, transform.position.y, transform.position.z);
         }
     }
 
