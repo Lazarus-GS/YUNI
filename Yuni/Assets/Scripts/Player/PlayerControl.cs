@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerControl : MonoBehaviour
 {
@@ -27,6 +28,10 @@ public class PlayerControl : MonoBehaviour
 
     public int numberOfOrbs = 0;
 
+    public bool Dead = false;
+    public bool IsDead = false;
+    public GameObject DeathScreen;
+
 
     //Vector3 lastVelocity;
 
@@ -41,12 +46,24 @@ public class PlayerControl : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
 
+        DeathScreen.SetActive(false);
+
     }
 
-
+    
     void Update()
     {
         ProcessInput();
+
+        //Death Screen
+        // Debug.Log("New" + IsDead);
+        IsDead = GameObject.Find("Player Variant").GetComponent<PlayerControl>().Dead;
+
+        if (IsDead)
+        {
+            DeathScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
 
     }//Update
 
@@ -143,7 +160,8 @@ public class PlayerControl : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            FindObjectOfType<GameManager>().deathScreen();
+            //Debug.Log("Dead");
+            Dead = true;
         }
       
 
@@ -207,8 +225,8 @@ public class PlayerControl : MonoBehaviour
             countdownTime -= 1 * Time.deltaTime;
             Debug.Log(countdownTime.ToString("0"));
             if (countdownTime <= 0)
-            { 
-                FindObjectOfType<GameManager>().deathScreen();
+            {
+                Dead = true;           
             }
             
             
@@ -235,6 +253,34 @@ public class PlayerControl : MonoBehaviour
 
     }
 
+    //Deathscreen Controls
+
+    public void Rerty()
+    {
+        /*DeathScreen.SetActive(false);
+        Time.timeScale = 1f;
+        IsDead = false;*/
+    }
+
+    public void Restart()
+    {
+        Debug.Log("Restarting");
+        //FindObjectOfType<GameManager>().restartGame();
+        //SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void MainMenu()
+    {
+        Debug.Log("Loading Menu...");
+        FindObjectOfType<GameManager>().mainMenu();
+    }
+
+    public void quittingGame()
+    {
+        Debug.Log("Quitting Game...");
+        Application.Quit();
+    }
 
 
 }

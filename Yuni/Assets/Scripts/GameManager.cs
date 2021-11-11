@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("deathScreen");
     }
+    /*public void RestartLevel()
+    {
+        SceneManager.LoadScene("deathScreen");
+    }*/
     public void restartGame()
     {
         //SceneManager.LoadScene("Level1");
@@ -16,7 +20,7 @@ public class GameManager : MonoBehaviour
 
     public void mainMenu()
     {
-        SceneManager.LoadScene("Main Menu");      
+        SceneManager.LoadScene("MMenu");      
     }
 
 
