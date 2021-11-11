@@ -1,0 +1,197 @@
+fileFormatVersion: 2
+guid: 8e5f4207dd9b0674791c3c8e28d95367
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 8833531278191940989
+    second: MSHRM.002|Cube.002Action
+  - first:
+      74: -383894260560746971
+    second: MSHRM.002|Cube.047_cell.002Action
+  - first:
+      74: -6545511788911181111
+    second: MSHRM.002|Cube.047_cell.003Action
+  - first:
+      74: 6452084528048507014
+    second: MSHRM.002|Cube.047_cell.004Action
+  - first:
+      74: 3881524399751976404
+    second: MSHRM.002|Cube.047_cell.005Action
+  - first:
+      74: 8021707639248374416
+    second: MSHRM.002|Cube.047_cell.006Action
+  - first:
+      74: 8479404144129034886
+    second: MSHRM.002|Cube.047_cell.007Action
+  - first:
+      74: 166869927281255897
+    second: MSHRM.002|Cube.047_cell.008Action
+  - first:
+      74: 160663031098455998
+    second: MSHRM.002|Cube.047_cell.009Action
+  - first:
+      74: 4446537996981263272
+    second: MSHRM.002|Cube.047_cell.010Action
+  - first:
+      74: 5920853750560097295
+    second: MSHRM.002|Cube.047_cell.011Action
+  - first:
+      74: -5294591567056084507
+    second: MSHRM.002|Cube.047_cell.012Action
+  - first:
+      74: -4887713447133455541
+    second: MSHRM.002|Cube.047_cell.013Action
+  - first:
+      74: 4961360802905866248
+    second: MSHRM.002|Cube.047_cell.014Action
+  - first:
+      74: 5729458700713589785
+    second: MSHRM.002|Cube.047_cell.015Action
+  - first:
+      74: 7467210418077498274
+    second: MSHRM.002|Cube.047_cell.016Action
+  - first:
+      74: -5342111106264192359
+    second: MSHRM.002|Cube.047_cell.017Action
+  - first:
+      74: -3806782512470859653
+    second: MSHRM.002|Cube.047_cell.018Action
+  - first:
+      74: -5033583702907129743
+    second: MSHRM.002|Cube.047_cell.019Action
+  - first:
+      74: 5949097663449550612
+    second: MSHRM.002|Cube.047_cell.020Action
+  - first:
+      74: 2159381811500025501
+    second: MSHRM.002|Cube.047_cell.021Action
+  - first:
+      74: -1818331318339395656
+    second: MSHRM.002|Cube.047_cell.022Action
+  - first:
+      74: 6879826783132743536
+    second: MSHRM.002|Cube.047_cell.023Action
+  - first:
+      74: -1082381006961807296
+    second: MSHRM.002|Cube.047_cell.024Action
+  - first:
+      74: 8378781072761714529
+    second: MSHRM.002|Cube.047_cell.025Action
+  - first:
+      74: -7075328333995411451
+    second: MSHRM.002|Cube.047_cell.026Action
+  - first:
+      74: 6525645170826521188
+    second: MSHRM.002|Cube.047_cell.027Action
+  - first:
+      74: 2687970868822276838
+    second: MSHRM.002|Cube.047_cell.028Action
+  - first:
+      74: 7869406290742357633
+    second: MSHRM.002|NurbsPath.002Action
+  - first:
+      74: -2240628342859984543
+    second: MSHRM.002|Plane.004Action
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: plant1.003
+    second: {fileID: 2100000, guid: 2e6a8b0eaf626d94fbcafa9f90e2c970, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
