@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0f6f6a965d430894faaa353e2552bd4f
+guid: 40df2cfbe876d9c418a10b7690ec06ba
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
@@ -7,7 +7,12 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Rock1
+      name: Vines
+    second: {fileID: 2100000, guid: 80bc26ccec89cf1458d57a2c360f1d2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ground
     second: {fileID: 2100000, guid: 80bc26ccec89cf1458d57a2c360f1d2e, type: 2}
   materials:
     materialImportMode: 2
@@ -50,7 +55,7 @@ ModelImporter:
     importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
