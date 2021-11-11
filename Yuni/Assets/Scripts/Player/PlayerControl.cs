@@ -40,6 +40,7 @@ public class PlayerControl : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
     }
 
 
@@ -100,14 +101,13 @@ public class PlayerControl : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
-        
-
         //thruster
         if (thrustKeypressd == true)
         {
-            _rBody.AddForce(Vector3.up * verticalThrust);
+            _rBody.AddForce(Vector3.up * verticalThrust);  
             thrustKeypressd = false;
+
+            
         }
 
         //When grounded nothing works
@@ -129,6 +129,8 @@ public class PlayerControl : MonoBehaviour
 
             transform.Rotate(-Vector3.forward * 1);
             rightKeyPressed = false;
+
+            
         }
 
         if (leftKeyPressed == true)

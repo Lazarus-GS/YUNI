@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6869547733740274667, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6869547733740274668, guid: 30a60772d9e3ed44cbd1d118f3095f6e, type: 3}
       propertyPath: currentHealth
