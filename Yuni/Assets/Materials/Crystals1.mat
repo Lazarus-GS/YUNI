@@ -21,14 +21,13 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Crystals1
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 9a8000177964df84a8653d7d4e5a5b66, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2000
-  stringTagMap:
-    RenderType: Opaque
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -90,6 +89,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_3a264b21c63844b8be5ae6c1a4f15c0f: 0.727
+    - Vector1_6042e55e282b48f891945e37e4ce874c: 0
+    - Vector1_a764ae42d53e4cf98e3e583f6a3d496b: 1
+    - Vector1_b73f6471cc334428b2f0c32aee6a5e68: 0.727
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -117,6 +120,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - Color_2a4fea7c97d54211b0dbf99fd7a4f3fa: {r: 9.821166, g: 0.2570985, b: 5.9889846, a: 1}
+    - Color_658564f50dc641bebc931f2a05c5efa7: {r: 0, g: 8.119249, b: 8.47419, a: 1}
+    - Color_af0c225ea059479db37ea467eecbc4e3: {r: 0.23910734, g: 0, b: 1.1056966, a: 1}
     - _BaseColor: {r: 0.33161265, g: 0.7638696, b: 0.8490566, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
