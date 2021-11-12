@@ -36,7 +36,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0012093, y: -238}
+  m_AnchoredPosition: {x: -0.0099984, y: -241}
   m_SizeDelta: {x: 660.93, y: 43.7979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4426713094408263279
@@ -437,7 +437,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0012093, y: -127}
+  m_AnchoredPosition: {x: -0.0099373, y: -116.54}
   m_SizeDelta: {x: 660.93, y: 43.7979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4426713094624238811
@@ -704,7 +704,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0012093, y: -182}
+  m_AnchoredPosition: {x: -0.0099984, y: -175}
   m_SizeDelta: {x: 660.93, y: 43.7979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4426713095346266016
@@ -1170,7 +1170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4426713095887510886
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1276,6 +1276,10 @@ MonoBehaviour:
   Dead: 0
   IsDead: 0
   DeathScreen: {fileID: 4426713095887510890}
+  Bombtip: {fileID: 0}
+  Collectibletip: {fileID: 0}
+  collide1: {fileID: 0}
+  collide2: {fileID: 0}
 --- !u!1 &4426713095999303937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1369,7 +1373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4426713096002297502
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1405,7 +1409,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4426713096002297505}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1435,7 +1439,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4426713096002297505}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 

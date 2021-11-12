@@ -22,7 +22,7 @@ public class MenuManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        frame[0].SetActive(true);
+        /*frame[0].SetActive(true);
         frame[1].SetActive(false);
         frame[2].SetActive(false);
         frame[3].SetActive(false);
@@ -30,7 +30,7 @@ public class MenuManager : MonoBehaviour
         frame0_cam.gameObject.SetActive(true);
         frame1_cam.gameObject.SetActive(false);
         frame2_cam.gameObject.SetActive(false);
-        frame3_cam.gameObject.SetActive(false);
+        frame3_cam.gameObject.SetActive(false);*/
     }
 
     // Update is called once per frame
