@@ -37,6 +37,7 @@ public class PlayerControl : MonoBehaviour
     public GameObject Bombtip;
     public GameObject Collectibletip;
     public GameObject GoupTip;
+    public GameObject FindKeyTip;
 
     public AudioSource collide1;
     public AudioSource collide2;
@@ -61,6 +62,7 @@ public class PlayerControl : MonoBehaviour
         Bombtip.SetActive(false);
         Collectibletip.SetActive(false);
         GoupTip.SetActive(false);
+        FindKeyTip.SetActive(false);
 
     }
 
@@ -302,6 +304,12 @@ public class PlayerControl : MonoBehaviour
 
         }
 
+        if (other.tag == "SealCollect")
+        {
+            FindKeyTip.SetActive(true);
+
+        }
+
     }
 
     private void OnTriggerExit(Collider other)
@@ -337,6 +345,19 @@ public class PlayerControl : MonoBehaviour
             Collectibletip.SetActive(false);
 
         }
+
+        if (other.tag == "GoUp")
+        {
+            GoupTip.SetActive(false);
+
+        }
+
+        if (other.tag == "SealCollect")
+        {
+            FindKeyTip.SetActive(false);
+
+        }
+
 
     }
 
