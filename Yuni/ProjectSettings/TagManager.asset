@@ -12,6 +12,8 @@ TagManager:
   - Collectibletip
   - Bombtip
   - Door1
+  - Key1
+  - Door1open
   layers:
   - Default
   - TransparentFX
