@@ -7,10 +7,12 @@ public class TimeBomb : MonoBehaviour
 {
     [SerializeField] private float explotionRadius = 5;
     [SerializeField] private float explotionForce = 500;
-    [SerializeField] private Animator bombAnimation;
+
+   // [SerializeField] private Animator bombAnimation;
 
     public float delay = 3f;
     public float countdownTime = 3f;
+    public AudioSource Bombsound;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,13 +53,15 @@ public class TimeBomb : MonoBehaviour
 
         }
 
-        bombAnimation.SetBool("Explodeanimation",true);
+        //bombAnimation.SetBool("Explodeanimation",true);
         Destroy(gameObject);
+        
     }
 
     IEnumerator timeDelay()
     {
         yield return new WaitForSeconds(delay);
+        Bombsound.Play();
         Explode();
 
     }

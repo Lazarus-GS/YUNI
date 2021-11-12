@@ -35,6 +35,7 @@ public class PlayerControl : MonoBehaviour
 
     public AudioSource collide1;
     public AudioSource collide2;
+    
 
 
     //Vector3 lastVelocity;

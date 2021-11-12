@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     
     public void deathScreen()
     {
-        SceneManager.LoadScene("deathScreen");
+        //SceneManager.LoadScene("deathScreen");
     }
     /*public void RestartLevel()
     {
