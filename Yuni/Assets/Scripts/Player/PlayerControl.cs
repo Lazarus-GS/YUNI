@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
 
     public float countdownTime;
 
-    private bool isGrounded;
+    //private bool isGrounded;
     [SerializeField] private Transform groundCheckTransform = null;
 
     public float verticalThrust = 45f;
@@ -25,8 +25,10 @@ public class PlayerControl : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
     public int collisionDamage;
+    private float countdownTimeforbomb = 3;
 
     public int numberOfOrbs = 0;
+    private bool key1Collected = false;
 
     public bool Dead = false;
     public bool IsDead = false;
@@ -38,6 +40,8 @@ public class PlayerControl : MonoBehaviour
     public AudioSource collide1;
     public AudioSource collide2;
     
+
+
 
 
     //Vector3 lastVelocity;
@@ -171,7 +175,7 @@ public class PlayerControl : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Debug.Log("Dead");
-            Dead = true;
+            IsDead = true;
         }
       
 
@@ -224,13 +228,21 @@ public class PlayerControl : MonoBehaviour
             
         }
 
+        if (other.tag == "Key1")
+        {
+            Destroy(GameObject.Find("Symbol1"));
+            key1Collected = true;
+        }
+
+        if(other.tag == "Door1open")
+        {
+
+        }
+
         if(other.tag == "Door1")
         {
             SceneManager.LoadScene("Level 2");
         }
-        
-        
-
 
         //landing stations
         if (other.tag == "Lander")
@@ -245,14 +257,22 @@ public class PlayerControl : MonoBehaviour
         //Boundary
         if (other.tag == "Boundary")
         {
-            countdownTime -= 1 * Time.deltaTime;
-            Debug.Log(countdownTime.ToString("0"));
+            countdownTime -= 1* Time.deltaTime;
+            //Debug.Log(countdownTime.ToString("0"));
             if (countdownTime <= 0)
             {
-                Dead = true;           
+                DeathScreen.SetActive(true);
+            }   
+        }
+
+        if (other.tag == "timebomb")
+        {
+            countdownTimeforbomb -= 1 * Time.deltaTime;
+            Debug.Log(countdownTimeforbomb.ToString("0"));
+            if (countdownTimeforbomb <= 0)
+            {
+                DeathScreen.SetActive(true);
             }
-            
-            
         }
 
         //Tips
@@ -280,6 +300,12 @@ public class PlayerControl : MonoBehaviour
         {
             countdownTime = 3;
         }
+
+        if (other.tag == "timebomb")
+        {
+            countdownTimeforbomb = 3;
+        }
+
         if (other.tag == "Lander")
         {
             GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 1f;
