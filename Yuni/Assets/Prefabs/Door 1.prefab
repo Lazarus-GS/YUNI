@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1899396985918893209}
   m_Layer: 0
   m_Name: DoorOpen
-  m_TagString: Untagged
+  m_TagString: Door1open
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46647838500725038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0035, y: 0.0209, z: -0.0002}
-  m_LocalScale: {x: 0.03420752, y: 0.04555325, z: 0.038692016}
+  m_LocalPosition: {x: 0.0035, y: 0.0139, z: -0.0001}
+  m_LocalScale: {x: 0.03420752, y: 0.0289582, z: 0.038692016}
   m_Children: []
   m_Father: {fileID: 3846253632769467050}
   m_RootOrder: 2
@@ -124,7 +124,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5165747868366528865
 Transform:
@@ -338,7 +338,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6006736529383049348
 Transform:

@@ -39,9 +39,8 @@ public class PlayerControl : MonoBehaviour
 
     public AudioSource collide1;
     public AudioSource collide2;
-    
 
-
+   
 
 
     //Vector3 lastVelocity;
@@ -238,10 +237,15 @@ public class PlayerControl : MonoBehaviour
 
         if(other.tag == "Door1open")
         {
-
+            if(key1Collected == true)
+            {
+                GameObject.Find("Door.L").GetComponent<Animator>().Play("Door1");
+                GameObject.Find("Door.R").GetComponent<Animator>().Play("Door2");
+            }
+  
         }
 
-        if(other.tag == "Door1")
+        if(other.tag == "NextScene")
         {
             SceneManager.LoadScene("Level 2");
         }
