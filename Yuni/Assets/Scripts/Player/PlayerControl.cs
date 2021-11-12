@@ -36,6 +36,7 @@ public class PlayerControl : MonoBehaviour
 
     public GameObject Bombtip;
     public GameObject Collectibletip;
+    public GameObject GoupTip;
 
     public AudioSource collide1;
     public AudioSource collide2;
@@ -59,6 +60,8 @@ public class PlayerControl : MonoBehaviour
         DeathScreen.SetActive(false);
         Bombtip.SetActive(false);
         Collectibletip.SetActive(false);
+        GoupTip.SetActive(false);
+
     }
 
     
@@ -290,6 +293,12 @@ public class PlayerControl : MonoBehaviour
         if (other.tag == "Collectibletip")
         {
             Collectibletip.SetActive(true);
+
+        }
+
+        if (other.tag == "GoUp")
+        {
+            GoupTip.SetActive(true);
 
         }
 
