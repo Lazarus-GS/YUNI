@@ -22,23 +22,9 @@ public class TimeBomb : MonoBehaviour
            StartCoroutine(timeDelay());  
         }
     }
-    private void OnTriggerStay(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            countdownTime -= 1 * Time.deltaTime;
-            Debug.Log(countdownTime.ToString("0"));
-            if (countdownTime <= 0)
-            {
-                FindObjectOfType<GameManager>().deathScreen();
-            }
-        }
-    }
+    
 
-    private void OnTriggerExit(Collider other)
-    {
-        countdownTime = delay;
-    }
+    
 
     private void Explode()
     {

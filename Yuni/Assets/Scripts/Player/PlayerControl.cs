@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
     public int currentHealth;
     public HealthBar healthBar;
     public int collisionDamage;
+    private float countdownTimeforbomb = 3;
 
     public int numberOfOrbs = 0;
 
@@ -38,6 +39,7 @@ public class PlayerControl : MonoBehaviour
     public AudioSource collide1;
     public AudioSource collide2;
     
+
 
 
     //Vector3 lastVelocity;
@@ -171,7 +173,7 @@ public class PlayerControl : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Debug.Log("Dead");
-            Dead = true;
+            IsDead = true;
         }
       
 
@@ -245,14 +247,22 @@ public class PlayerControl : MonoBehaviour
         //Boundary
         if (other.tag == "Boundary")
         {
-            countdownTime -= 1 * Time.deltaTime;
-            Debug.Log(countdownTime.ToString("0"));
+            countdownTime -= 1* Time.deltaTime;
+            //Debug.Log(countdownTime.ToString("0"));
             if (countdownTime <= 0)
             {
-                Dead = true;           
+                DeathScreen.SetActive(true);
+            }   
+        }
+
+        if (other.tag == "timebomb")
+        {
+            countdownTimeforbomb -= 1 * Time.deltaTime;
+            Debug.Log(countdownTimeforbomb.ToString("0"));
+            if (countdownTimeforbomb <= 0)
+            {
+                DeathScreen.SetActive(true);
             }
-            
-            
         }
 
         //Tips
@@ -280,6 +290,12 @@ public class PlayerControl : MonoBehaviour
         {
             countdownTime = 3;
         }
+
+        if (other.tag == "timebomb")
+        {
+            countdownTimeforbomb = 3;
+        }
+
         if (other.tag == "Lander")
         {
             GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 1f;
