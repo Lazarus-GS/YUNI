@@ -14,6 +14,7 @@ TagManager:
   - Door1
   - Key1
   - Door1open
+  - NextScene
   layers:
   - Default
   - TransparentFX
