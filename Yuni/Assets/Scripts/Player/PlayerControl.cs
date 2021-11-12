@@ -237,6 +237,7 @@ public class PlayerControl : MonoBehaviour
         if (other.tag == "Key1")
         {
             Destroy(GameObject.Find("Symbol1"));
+            Destroy(GameObject.Find("Symbol2"));
             key1Collected = true;
         }
 
