@@ -31,7 +31,7 @@ public class PlayerControl : MonoBehaviour
     public bool Dead = false;
     public bool IsDead = false;
     public GameObject DeathScreen;
-    public GameObject DeathBlack;
+    public GameObject Bombtip;
 
     public AudioSource collide1;
     public AudioSource collide2;
@@ -52,9 +52,7 @@ public class PlayerControl : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
 
         DeathScreen.SetActive(false);
-
-
-
+        Bombtip.SetActive(false);
     }
 
     
@@ -223,6 +221,8 @@ public class PlayerControl : MonoBehaviour
             
         }
         
+        
+
 
         //landing stations
         if (other.tag == "Lander")
@@ -246,7 +246,13 @@ public class PlayerControl : MonoBehaviour
             
             
         }
-        
+
+        //Tips
+        if (other.tag == "Bombtip")
+        {
+            Bombtip.SetActive(true);
+
+        }
 
     }
 
@@ -264,6 +270,13 @@ public class PlayerControl : MonoBehaviour
         if (other.tag == "Lander")
         {
             GameObject.Find("Vale(Object)").GetComponent<CapsuleCollider>().material.bounciness = 1f;
+        }
+
+        //Tips
+        if (other.tag == "Bombtip")
+        {
+            Bombtip.SetActive(false);
+
         }
 
     }

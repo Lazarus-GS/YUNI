@@ -9,6 +9,7 @@ TagManager:
   - timebomb
   - Boundary
   - Terrain
+  - Bombtip
   layers:
   - Default
   - TransparentFX
