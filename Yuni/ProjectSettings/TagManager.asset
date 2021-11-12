@@ -11,6 +11,7 @@ TagManager:
   - Terrain
   - Collectibletip
   - Bombtip
+  - Door1
   layers:
   - Default
   - TransparentFX

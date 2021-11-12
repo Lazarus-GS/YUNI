@@ -223,6 +223,11 @@ public class PlayerControl : MonoBehaviour
             noControls = false;
             
         }
+
+        if(other.tag == "Door1")
+        {
+            SceneManager.LoadScene("Level 2");
+        }
         
         
 
