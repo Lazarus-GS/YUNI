@@ -192,7 +192,7 @@ public class PlayerControl : MonoBehaviour
         {
             var velocity = _rBody.velocity;
             float speed = velocity.magnitude;
-            if (speed >= 3.0f)
+            if (speed >= 3.5f)
             {
                 //Debug.Log(speed);
                 TakeDamage(collisionDamage);
