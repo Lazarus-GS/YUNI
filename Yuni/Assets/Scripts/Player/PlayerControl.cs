@@ -175,7 +175,9 @@ public class PlayerControl : MonoBehaviour
         if (currentHealth <= 0)
         {
             //Debug.Log("Dead");
-            IsDead = true;
+            //IsDead = true;
+            DeathScreen.SetActive(true);
+
         }
       
 
