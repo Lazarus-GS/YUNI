@@ -253,7 +253,12 @@ public class PlayerControl : MonoBehaviour
 
         if(other.tag == "NextScene")
         {
-            SceneManager.LoadScene("Level 2");
+            SceneManager.LoadScene("CutScene2");
+        }
+
+        if (other.tag == "NextScene2")
+        {
+            SceneManager.LoadScene("ThankYou");
         }
 
         //landing stations

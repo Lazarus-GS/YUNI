@@ -232,7 +232,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254675088}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 69a6cd963a5aba841afabd0ae412fd71, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: e5e37cf76faa3054fb0d376a021f8543, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -369,7 +369,6 @@ GameObject:
   - component: {fileID: 697817076}
   - component: {fileID: 697817075}
   - component: {fileID: 697817077}
-  - component: {fileID: 697817078}
   m_Layer: 5
   m_Name: Tip
   m_TagString: Untagged
@@ -391,10 +390,10 @@ RectTransform:
   m_Father: {fileID: 1535078211}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -447.52197, y: 164.44519}
-  m_SizeDelta: {x: 377.0439, y: 56.8904}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 310, y: 111}
+  m_SizeDelta: {x: 377.04395, y: 56.8904}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &697817075
 MonoBehaviour:
@@ -429,7 +428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: PRESS [SPACE] TO CONTINUE
+  m_Text: PRESS [ESC] TO CONTINUE
 --- !u!222 &697817076
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -457,21 +456,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!111 &697817078
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697817073}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: ec9e4763426619849abf207bca288863, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &1206887424
 GameObject:
   m_ObjectHideFlags: 0
