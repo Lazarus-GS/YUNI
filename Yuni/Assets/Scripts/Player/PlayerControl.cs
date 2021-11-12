@@ -14,7 +14,7 @@ public class PlayerControl : MonoBehaviour
 
     public float countdownTime;
 
-    private bool isGrounded;
+    //private bool isGrounded;
     [SerializeField] private Transform groundCheckTransform = null;
 
     public float verticalThrust = 45f;
@@ -28,6 +28,7 @@ public class PlayerControl : MonoBehaviour
     private float countdownTimeforbomb = 3;
 
     public int numberOfOrbs = 0;
+    private bool key1Collected = false;
 
     public bool Dead = false;
     public bool IsDead = false;
@@ -39,6 +40,7 @@ public class PlayerControl : MonoBehaviour
     public AudioSource collide1;
     public AudioSource collide2;
     
+
 
 
 
@@ -226,13 +228,21 @@ public class PlayerControl : MonoBehaviour
             
         }
 
+        if (other.tag == "Key1")
+        {
+            Destroy(GameObject.Find("Symbol1"));
+            key1Collected = true;
+        }
+
+        if(other.tag == "Door1open")
+        {
+
+        }
+
         if(other.tag == "Door1")
         {
             SceneManager.LoadScene("Level 2");
         }
-        
-        
-
 
         //landing stations
         if (other.tag == "Lander")
