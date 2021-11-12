@@ -1,5 +1,132 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1254252283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1254252284}
+  - component: {fileID: 1254252285}
+  m_Layer: 0
+  m_Name: Door Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1254252284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254252283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3846253632769467050}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &1254252285
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254252283}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 13a708a9ef2385e4bb88b38eb9169138, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 811538242d0ca1a4d9a9bdf19c8265f8, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &46647838500725038
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,9 +138,10 @@ GameObject:
   - component: {fileID: 8654099873342312251}
   - component: {fileID: 7788189330337304851}
   - component: {fileID: 1899396985918893209}
+  - component: {fileID: 446861453}
   m_Layer: 0
   m_Name: DoorOpen
-  m_TagString: Untagged
+  m_TagString: Door1open
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,8 +154,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46647838500725038}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0035, y: 0.0209, z: -0.0002}
-  m_LocalScale: {x: 0.03420752, y: 0.04555325, z: 0.038692016}
+  m_LocalPosition: {x: 0.0035, y: 0.0139, z: -0.0001}
+  m_LocalScale: {x: 0.03420752, y: 0.0289582, z: 0.038692016}
   m_Children: []
   m_Father: {fileID: 3846253632769467050}
   m_RootOrder: 2
@@ -53,6 +181,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &446861453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46647838500725038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ad6678d202f5144ba5d7f82ea55b0e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Doorsound: {fileID: 1254252285}
 --- !u!1 &924156118131502359
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +207,7 @@ GameObject:
   - component: {fileID: 5020245052346314529}
   m_Layer: 0
   m_Name: NextScene
-  m_TagString: Untagged
+  m_TagString: NextScene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -79,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924156118131502359}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0034, y: -0.0286, z: -0.004}
+  m_LocalPosition: {x: 0.0034, y: -0.0396, z: -0.0039}
   m_LocalScale: {x: 0.03420752, y: 0.04555325, z: 0.027680462}
   m_Children: []
   m_Father: {fileID: 3846253632769467050}
@@ -124,7 +265,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5165747868366528865
 Transform:
@@ -249,12 +390,13 @@ Transform:
   m_GameObject: {fileID: 4479801661937154064}
   m_LocalRotation: {x: -0.49725893, y: 0.50315547, z: 0.49821204, w: 0.5013511}
   m_LocalPosition: {x: 44.861, y: 11.89, z: -1.3994}
-  m_LocalScale: {x: 123.99, y: 123.99, z: 123.99}
+  m_LocalScale: {x: 143.39442, y: 143.39442, z: 143.39442}
   m_Children:
   - {fileID: 6006736529383049348}
   - {fileID: 5165747868366528865}
   - {fileID: 8654099873342312251}
   - {fileID: 2884207966484623904}
+  - {fileID: 1254252284}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90.52, y: -84.539, z: 174.697}
@@ -338,7 +480,7 @@ GameObject:
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &6006736529383049348
 Transform:
