@@ -3,7 +3,7 @@ Hacktron Game Development Hackathon- Yuni
 
 ![alt text](https://github.com/Lazarus-GS/YUNI/blob/main/Images/logor5.png)
 ![alt text](https://github.com/Lazarus-GS/YUNI/blob/main/Images/Slide1.PNG)
-![alt text](https://github.com/Lazarus-GS/YUNI/blob/main/Images/Slide2.PNG)
+![alt text](https://github.com/Lazarus-GS/YUNI/blob/main/Images/YUNI.png)
 ![alt text](https://github.com/Lazarus-GS/YUNI/blob/main/Images/Slide3.PNG)
 ![alt text](https://github.com/Lazarus-GS/YUNI/blob/main/Images/Slide4.PNG)
 ![alt text](https://github.com/Lazarus-GS/YUNI/blob/main/Images/Slide5.PNG)
